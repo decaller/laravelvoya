@@ -30,6 +30,7 @@ require_once __DIR__.'/public/index.php';
 require_once __DIR__.'../*public_html or subdomain folder*/index.php';
 ```
 4. Make .env file
+>try using `https://` instead and do not add extra slash at the end 
 5. Set permission rapotapp/storage to 777 recursively
 6. Do `composer install`
 7. Do `php artisan voyager:install`
@@ -61,16 +62,17 @@ $app = require_once __DIR__.'/../bootstrap/app.php';
 
 // to
 
-require __DIR__.'/../rapotapp/vendor/autoload.php';
+require __DIR__.'/../laravelvoya/vendor/autoload.php';
 
-$app = require_once __DIR__.'/../rapotapp/bootstrap/app.php';
+$app = require_once __DIR__.'/../laravelvoya/bootstrap/app.php';
 ```
-2. Make Symlink storage in public folder to rapotapp/storage/app/public
+2. Make Symlink storage in public folder to laravelvoya/storage/app/public
 
 >If you use windows use `mklink /d` in CMD (powershell won't work)
 
 >If you use linux use `ln -s`
 
+>If you can see the captain profile picture it means you succeded, eventhough sometimes voyager said it's missing symlink, just ignore it.
 ## Older mysql caveat
 1. Change mysql parameter in config/database.php
 ```php
