@@ -1,5 +1,5 @@
 # requirement
-..* shared hosting with terminal access
+* shared hosting with terminal access
 
 # Backgorund
 
@@ -14,7 +14,7 @@ To prevent unauthorized user access laravel files.
 Some shared hosting have older MySql/MariaDB database type.
 
 # TODO
-..* Make script for automation
+* Make script for automation
 
 # How to install to shared hosting or local server (like Xampp)
 
@@ -65,6 +65,11 @@ require __DIR__.'/../rapotapp/vendor/autoload.php';
 
 $app = require_once __DIR__.'/../rapotapp/bootstrap/app.php';
 ```
+2. Make Symlink storage in public folder to rapotapp/storage/app/public
+
+>If you use windows use `mklink /d` in CMD (powershell won't work)
+
+>If you use linux use `ln -s`
 
 ## Older mysql caveat
 1. Change mysql parameter in config/database.php
